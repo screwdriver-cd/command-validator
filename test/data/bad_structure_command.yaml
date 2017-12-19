@@ -6,4 +6,4 @@ format: docker
 habitat:
   mode: remote
   package: core/git
-  binary: git
+  command: git
