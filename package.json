@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git@github.com:screwdriver-cd/command-validator.git"
   },
+  "bin": {
+    "command-validate": "./validate.js"
+  },
   "homepage": "https://github.com/screwdriver-cd/command-validator",
   "bugs": "https://github.com/screwdriver-cd/screwdriver/issues",
   "keywords": [
@@ -37,6 +40,7 @@
     "jenkins-mocha": "^6.0.0"
   },
   "dependencies": {
+    "commander": "^2.12.2",
     "joi": "^10.6.0",
     "js-yaml": "^3.8.1",
     "screwdriver-data-schema": "^18.9.0"

@@ -37,7 +37,7 @@ function validateCommand(commandObj) {
 /**
  * Parses the configuration from a screwdriver-command-spec.yaml
  * @method parseCommand
- * @param  {String} yamlString Contents of screwdriver-command-spec.yaml
+ * @param  {String} yamlString Contents of screwdriver command yaml
  * @return {Promise}           Promise that rejects if the configuration cannot be parsed
  *                             The promise will eventually resolve into:
  *         {Object}   config

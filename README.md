@@ -21,7 +21,6 @@ habitat:
 
 ## Usage
 
-
 ```bash
 $ npm install screwdriver-command-validator
 ```
@@ -55,6 +54,23 @@ config: {
         command: 'git clone'
     }
 }
+```
+
+Validate in CLI:
+```bash
+$ ./node_modules/.bin/command-validate -h
+
+  Usage: validate [options]
+
+
+  Options:
+
+    -j, --json         output with JSON
+    -f, --file [name]  screwdriver command file (default: ./sd-command.yaml)
+    -h, --help         output usage information
+
+$ ./node_modules/.bin/command-validate -j
+{"valid":true}
 ```
 
 ## Testing
