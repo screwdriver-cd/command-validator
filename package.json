@@ -43,7 +43,7 @@
     "commander": "^2.12.2",
     "joi": "^10.6.0",
     "js-yaml": "^3.8.1",
-    "screwdriver-data-schema": "^18.9.0"
+    "screwdriver-data-schema": "^18.10.0"
   },
   "release": {
     "debug": false,
