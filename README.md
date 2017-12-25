@@ -9,7 +9,7 @@
 # example.yaml
 namespace: git
 command: clone
-version: '1.0'
+version: '1.1'
 description: SD Command for git clone with habitat.
 maintainer: example@gmail.com
 format: habitat
