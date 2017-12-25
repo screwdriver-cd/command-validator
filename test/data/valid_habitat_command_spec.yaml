@@ -1,0 +1,10 @@
+namespace: foo
+command: bar
+version: '1.0'
+description: this is sd-command of habitat
+maintainer: foo@bar.com
+format: habitat
+habitat:
+    mode: remote
+    package: core/git/2.14.1
+    command:  git

@@ -1,0 +1,9 @@
+namespace: foo
+command: bar
+version: '1.0'
+description: this is sd-command of docker
+maintainer: foo@bar.com
+format: docker
+docker:
+  image: node:6
+  command: node

@@ -1,0 +1,9 @@
+namespace: foo
+command: bar
+version: '1.0'
+maintainer: foo@bar.com
+format: docker
+habitat:
+  mode: remote
+  package: core/git
+  command: git

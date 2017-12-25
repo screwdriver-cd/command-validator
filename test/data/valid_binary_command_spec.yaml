@@ -1,0 +1,8 @@
+namespace: foo
+command: bar
+version: '1.0'
+description: this is sd-command of binary
+maintainer: foo@bar.com
+format: binary
+binary:
+  file: ./foobar.sh
