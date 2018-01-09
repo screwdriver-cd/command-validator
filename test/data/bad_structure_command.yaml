@@ -1,5 +1,5 @@
 namespace: foo
-command: bar
+name: bar
 version: '1.0'
 maintainer: foo@bar.com
 format: docker

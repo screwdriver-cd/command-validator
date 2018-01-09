@@ -25,7 +25,7 @@ describe('index test', () => {
                     config: {
                         description: 'this is sd-command of binary',
                         maintainer: 'foo@bar.com',
-                        command: 'bar',
+                        name: 'bar',
                         namespace: 'foo',
                         version: '1.0',
                         format: 'binary',
@@ -49,7 +49,7 @@ describe('index test', () => {
                     config: {
                         description: 'this is sd-command of docker',
                         maintainer: 'foo@bar.com',
-                        command: 'bar',
+                        name: 'bar',
                         namespace: 'foo',
                         version: '1.0',
                         format: 'docker',
@@ -74,7 +74,7 @@ describe('index test', () => {
                     config: {
                         description: 'this is sd-command of habitat',
                         maintainer: 'foo@bar.com',
-                        command: 'bar',
+                        name: 'bar',
                         namespace: 'foo',
                         version: '1.0',
                         format: 'habitat',
@@ -95,7 +95,7 @@ describe('index test', () => {
             .then((result) => {
                 assert.deepEqual(result.config, {
                     maintainer: 'foo@bar.com',
-                    command: 'bar',
+                    name: 'bar',
                     namespace: 'foo',
                     version: '1.0',
                     format: 'docker',
