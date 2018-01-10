@@ -3,7 +3,7 @@
 
 > A module for validating a Screwdriver Command file
 
-## yaml
+## YAML
 
 ```yaml
 # example.yaml
