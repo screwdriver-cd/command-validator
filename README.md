@@ -8,7 +8,7 @@
 ```yaml
 # example.yaml
 namespace: git
-command: clone
+name: clone
 version: '1.1'
 description: SD Command for git clone with habitat.
 maintainer: example@gmail.com
@@ -44,7 +44,7 @@ Output of the console.log():
 config: {
     description: 'SD Command for git clone with habitat.',
     maintainer: 'example@gmail.com',
-    command: 'git',
+    name: 'git',
     namespace: 'clone',
     version: '1.0',
     format: 'habitat',

@@ -1,5 +1,5 @@
 namespace: foo
-command: bar
+name: bar
 version: '1.0'
 description: this is sd-command of binary
 maintainer: foo@bar.com
