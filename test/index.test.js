@@ -22,7 +22,7 @@ describe('index test', () => {
 
                 assert.deepEqual(config, {
                     errors: [],
-                    config: {
+                    command: {
                         description: 'this is sd-command of binary',
                         maintainer: 'foo@bar.com',
                         name: 'bar',
@@ -46,7 +46,7 @@ describe('index test', () => {
 
                 assert.deepEqual(config, {
                     errors: [],
-                    config: {
+                    command: {
                         description: 'this is sd-command of docker',
                         maintainer: 'foo@bar.com',
                         name: 'bar',
@@ -71,7 +71,7 @@ describe('index test', () => {
 
                 assert.deepEqual(config, {
                     errors: [],
-                    config: {
+                    command: {
                         description: 'this is sd-command of habitat',
                         maintainer: 'foo@bar.com',
                         name: 'bar',
@@ -93,7 +93,7 @@ describe('index test', () => {
 
         return validator(yamlString)
             .then((result) => {
-                assert.deepEqual(result.config, {
+                assert.deepEqual(result.command, {
                     maintainer: 'foo@bar.com',
                     name: 'bar',
                     namespace: 'foo',

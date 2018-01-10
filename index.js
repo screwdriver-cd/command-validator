@@ -51,10 +51,10 @@ function parseCommand(yamlString) {
             validateCommand(configToValidate)
                 .then(commandConfiguration => ({
                     errors: [],
-                    config: commandConfiguration
+                    command: commandConfiguration
                 }), err => ({
                     errors: err.details,
-                    config: configToValidate
+                    command: configToValidate
                 }))
         );
 }
