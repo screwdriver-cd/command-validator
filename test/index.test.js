@@ -106,15 +106,14 @@ describe('index test', () => {
                     }
                 });
                 assert.strictEqual(result.errors.length, 2);
-
                 // check required description
-                const missingField = hoek.reach(result.command, result.errors[0].path);
+                const missingField = hoek.reach(result.command, result.errors[0].path[0]);
 
                 assert.strictEqual(result.errors[0].message, '"description" is required');
                 assert.isUndefined(missingField);
 
                 // check required docker specified in format
-                const missingField2 = hoek.reach(result.command, result.errors[1].path);
+                const missingField2 = hoek.reach(result.command, result.errors[1].path[0]);
 
                 assert.strictEqual(result.errors[1].message, '"docker" is required');
                 assert.isUndefined(missingField2);
