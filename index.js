@@ -36,27 +36,29 @@ function validateCommand(commandObj) {
 
 /**
  * Parses the configuration from a screwdriver-command-spec.yaml
- * @method parseCommand
- * @param  {String} yamlString Contents of screwdriver command yaml
- * @return {Promise}           Promise that rejects if the configuration cannot be parsed
- *                             The promise will eventually resolve into:
+ * @async  parseCommand
+ * @param  {String}  yamlString Contents of screwdriver command yaml
+ * @return {Promise}            Promise that rejects if the configuration cannot be parsed
+ *                              The promise will eventually resolve into:
  *         {Object}   config
  *         {Object}   config.command   The parsed command that was validated
  *         {Object[]} config.errors    An array of objects related to validating
  *                                     the given command
  */
-function parseCommand(yamlString) {
-    return loadCommandSpecYaml(yamlString)
-        .then(configToValidate =>
-            validateCommand(configToValidate)
-                .then(commandConfiguration => ({
-                    errors: [],
-                    command: commandConfiguration
-                }), err => ({
-                    errors: err.details,
-                    command: configToValidate
-                }))
-        );
+async function parseCommand(yamlString) {
+    const command = await loadCommandSpecYaml(yamlString);
+
+    try {
+        return {
+            errors: [],
+            command: await validateCommand(command)
+        };
+    } catch (err) {
+        return {
+            errors: err.details,
+            command
+        };
+    }
 }
 
 module.exports = parseCommand;
