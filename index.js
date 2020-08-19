@@ -1,6 +1,5 @@
 'use strict';
 
-const Joi = require('joi');
 const SCHEMA_CONFIG = require('screwdriver-data-schema').config.command.schemaCommand;
 const Yaml = require('js-yaml');
 
@@ -20,18 +19,14 @@ function loadCommandSpecYaml(yamlString) {
  * @param  {Object}         commandObj  Configuration object that represents the command
  * @return {Promise}                    Promise that resolves to the passed-in config object
  */
-function validateCommand(commandObj) {
-    return new Promise((resolve, reject) => {
-        Joi.validate(commandObj, SCHEMA_CONFIG, {
+async function validateCommand(commandObj) {
+    try {
+        return await SCHEMA_CONFIG.validateAsync(commandObj, {
             abortEarly: false
-        }, (err, data) => {
-            if (err) {
-                return reject(err);
-            }
-
-            return resolve(data);
         });
-    });
+    } catch (err) {
+        throw err;
+    }
 }
 
 /**

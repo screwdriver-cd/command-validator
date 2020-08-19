@@ -2,7 +2,7 @@
 
 const assert = require('chai').assert;
 const fs = require('fs');
-const hoek = require('hoek');
+const hoek = require('@hapi/hoek');
 const path = require('path');
 const validator = require('../index.js');
 
