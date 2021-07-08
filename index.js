@@ -20,13 +20,9 @@ function loadCommandSpecYaml(yamlString) {
  * @return {Promise}                    Promise that resolves to the passed-in config object
  */
 async function validateCommand(commandObj) {
-    try {
-        return await SCHEMA_CONFIG.validateAsync(commandObj, {
-            abortEarly: false
-        });
-    } catch (err) {
-        throw err;
-    }
+    return SCHEMA_CONFIG.validateAsync(commandObj, {
+        abortEarly: false
+    });
 }
 
 /**
