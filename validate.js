@@ -2,9 +2,9 @@
 
 'use strict';
 
-const index = require('./index');
 const commander = require('commander');
 const fs = require('fs');
+const index = require('./index');
 
 commander
     .usage('[options]')
@@ -19,13 +19,12 @@ commander
  * @return {Promise}    Promise that resolves to the command as a yaml string
  */
 function loadFile(path) {
-    return new Promise(resolve =>
-        resolve(fs.readFileSync(path, 'utf8')));
+    return new Promise(resolve => resolve(fs.readFileSync(path, 'utf8')));
 }
 
 return loadFile(commander.file)
     .then(yamlString => index(yamlString))
-    .then((result) => {
+    .then(result => {
         if (result.errors.length > 0) {
             console.error(result.errors);
             process.exit(1);
@@ -35,7 +34,7 @@ return loadFile(commander.file)
             console.log('true');
         }
     })
-    .catch((err) => {
+    .catch(err => {
         console.error(err);
         process.exit(1);
     });

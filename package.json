@@ -35,9 +35,9 @@
   ],
   "devDependencies": {
     "@hapi/hoek": "^9.0.4",
-    "chai": "^3.5.0",
-    "eslint": "^4.3.0",
-    "eslint-config-screwdriver": "^3.0.0",
+    "chai": "^4.2.0",
+    "eslint": "^7.5.0",
+    "eslint-config-screwdriver": "^5.0.1",
     "mocha": "^8.2.1",
     "mocha-multi-reporters": "^1.5.1",
     "mocha-sonarqube-reporter": "^1.0.2",
@@ -47,7 +47,7 @@
     "commander": "^2.12.2",
     "joi": "^17.2.0",
     "js-yaml": "^3.8.1",
-    "screwdriver-data-schema": "^21.0.0"
+    "screwdriver-data-schema": "^21.7.0"
   },
   "release": {
     "debug": false,
