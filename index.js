@@ -10,7 +10,9 @@ const Yaml = require('js-yaml');
  * @return {Promise}           Promise that resolves to the command as a config object
  */
 function loadCommandSpecYaml(yamlString) {
-    return new Promise(resolve => resolve(Yaml.safeLoad(yamlString)));
+    return new Promise(resolve => {
+        resolve(Yaml.load(yamlString));
+    });
 }
 
 /**

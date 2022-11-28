@@ -19,7 +19,9 @@ commander
  * @return {Promise}    Promise that resolves to the command as a yaml string
  */
 function loadFile(path) {
-    return new Promise(resolve => resolve(fs.readFileSync(path, 'utf8')));
+    return new Promise(resolve => {
+        resolve(fs.readFileSync(path, 'utf8'));
+    });
 }
 
 return loadFile(commander.file)
