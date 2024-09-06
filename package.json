@@ -1,6 +1,6 @@
 {
   "name": "screwdriver-command-validator",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "A module for validating a Screwdriver Command file",
   "main": "index.js",
   "scripts": {
@@ -46,7 +46,7 @@
     "commander": "^9.4.1",
     "joi": "^17.7.0",
     "js-yaml": "^4.1.0",
-    "screwdriver-data-schema": "^23.0.4"
+    "screwdriver-data-schema": "^24.0.0"
   },
   "release": {
     "debug": false
