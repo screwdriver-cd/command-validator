@@ -1,6 +1,6 @@
 {
   "name": "screwdriver-command-validator",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "A module for validating a Screwdriver Command file",
   "main": "index.js",
   "scripts": {
@@ -33,20 +33,20 @@
     "Tiffany Kyi <tiffanykyi@gmail.com>"
   ],
   "devDependencies": {
-    "@hapi/hoek": "^10.0.1",
+    "@hapi/hoek": "^11.0.7",
     "chai": "^4.3.7",
-    "eslint": "^8.28.0",
-    "eslint-config-screwdriver": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-screwdriver": "^8.0.0",
     "mocha": "^10.1.0",
     "mocha-multi-reporters": "^1.5.1",
     "mocha-sonarqube-reporter": "^1.0.2",
     "nyc": "^15.1.0"
   },
   "dependencies": {
-    "commander": "^9.4.1",
-    "joi": "^17.7.0",
+    "commander": "^13.1.0",
+    "joi": "^17.13.3",
     "js-yaml": "^4.1.0",
-    "screwdriver-data-schema": "^24.0.0"
+    "screwdriver-data-schema": "^25.0.0"
   },
   "release": {
     "debug": false
