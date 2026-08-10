@@ -45,7 +45,7 @@
   "dependencies": {
     "commander": "^13.1.0",
     "joi": "^17.13.3",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^5.2.3",
     "screwdriver-data-schema": "^25.0.0"
   },
   "release": {
