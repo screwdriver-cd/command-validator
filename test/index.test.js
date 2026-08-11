@@ -85,6 +85,27 @@ describe('index test', () => {
         });
     });
 
+    it('parses yaml merge keys', () => {
+        const yamlString = `
+<<: &metadata
+  namespace: foo
+  name: bar
+  version: '1.0'
+  description: command using a merge key
+  maintainer: foo@bar.com
+format: docker
+docker:
+  image: node:22
+  command: node
+`;
+
+        return validator(yamlString).then(result => {
+            assert.deepEqual(result.errors, []);
+            assert.strictEqual(result.command.name, 'bar');
+            assert.strictEqual(result.command.namespace, 'foo');
+        });
+    });
+
     it('validates a poorly structured command yaml', () => {
         const yamlString = fs.readFileSync(BAD_STRUCTURE_COMMAND_PATH);
 
@@ -123,4 +144,13 @@ describe('index test', () => {
             assert.match(err, /YAMLException/);
         });
     });
+
+    it('throws when parsing yaml without a document', () =>
+        Promise.all(
+            ['', '   ', '# comment only'].map(yamlString =>
+                validator(yamlString).then(assert.fail, err => {
+                    assert.match(err, /expected a document/);
+                })
+            )
+        ));
 });

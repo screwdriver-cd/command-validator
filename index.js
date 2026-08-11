@@ -2,6 +2,13 @@
 
 const SCHEMA_CONFIG = require('screwdriver-data-schema').config.command.schemaCommand;
 const Yaml = require('js-yaml');
+const YAML_SCHEMA = Yaml.CORE_SCHEMA.withTags(
+    Yaml.binaryTag,
+    Yaml.mergeTag,
+    Yaml.omapTag,
+    Yaml.pairsTag,
+    Yaml.timestampTag
+);
 
 /**
  * Loads the configuration from a stringified sd-command.yaml
@@ -11,7 +18,7 @@ const Yaml = require('js-yaml');
  */
 function loadCommandSpecYaml(yamlString) {
     return new Promise(resolve => {
-        resolve(Yaml.load(yamlString));
+        resolve(Yaml.load(yamlString, { schema: YAML_SCHEMA }));
     });
 }
 
